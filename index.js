@@ -6,7 +6,7 @@ const userRoutes = require('./routes/user');
 const chatRoutes = require('./routes/chat');
 const messagesRoutes = require('./routes/messages');
 const { createServer } = require('http');
-const { Server } = require('socket.io');
+const { Server: Index } = require('socket.io');
 
 // Load environment variables
 dotenv.config();
@@ -54,7 +54,7 @@ app.get('/', (req, res) => {
 });
 
 // Initialize Socket.io
-const io = new Server(httpServer, {
+const io = new Index(httpServer, {
     cors: {
         origin: '*',
         methods: ['GET', 'POST'],
