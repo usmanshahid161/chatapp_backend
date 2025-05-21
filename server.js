@@ -12,7 +12,7 @@ const { Server } = require('socket.io');
 dotenv.config();
 
 // Connect to database
-connectDB();
+// connectDB();
 
 // Initialize Express
 const app = express();
