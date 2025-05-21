@@ -20,7 +20,7 @@ const httpServer = createServer(app);
 
 // Middleware
 // app.use(cors());
-app.use(express.json()); // To parse JSON request body
+app.use(express.json());  // To parse JSON request body
 
 app.get('/webhook', (req, res) => {
     const VERIFY_TOKEN = '123123123'; // you defined this in Meta UI
