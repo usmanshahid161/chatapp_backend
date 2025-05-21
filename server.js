@@ -12,14 +12,14 @@ const { Server } = require('socket.io');
 dotenv.config();
 
 // Connect to database
-// connectDB();
+connectDB();
 
 // Initialize Express
 const app = express();
 const httpServer = createServer(app);
 
 // Middleware
-// app.use(cors());
+app.use(cors());
 app.use(express.json()); // To parse JSON request body
 
 app.get('/webhook', (req, res) => {
