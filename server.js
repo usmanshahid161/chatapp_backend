@@ -39,6 +39,10 @@ app.get('/webhook', (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+})
+
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/chats', chatRoutes);
